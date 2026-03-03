@@ -1,0 +1,73 @@
+
+#include <stdio.h>
+
+
+
+void twoSum(int* nums, int n, int target) {
+
+    for (int i = 0; i < n - 1; i++) {
+
+        for (int j = i + 1; j < n; j++) {
+
+            if (nums[i] + nums[j] == target) {
+
+                printf("Indices: [%d, %d]\n", i, j);
+
+                printf("Elements: nums[%d]=%d + nums[%d]=%d = %d\n",
+
+                       i, nums[i], j, nums[j], target);
+
+                return;
+
+            }
+
+        }
+
+    }
+
+    printf("No solution found!\n");
+
+}
+
+
+
+int main() {
+
+    int n, target;
+
+
+
+    printf("Enter number of elements: ");
+
+    scanf("%d", &n);
+
+
+
+    int nums[n];
+
+
+
+    printf("Enter %d elements: ", n);
+
+    for (int i = 0; i < n; i++) {
+
+        scanf("%d", &nums[i]);
+
+    }
+
+
+
+    printf("Enter target: ");
+
+    scanf("%d", &target);
+
+
+
+    twoSum(nums, n, target);
+
+
+
+    return 0;
+
+}
+
